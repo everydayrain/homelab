@@ -1,0 +1,11 @@
+  ---
+  creation_rules:
+    - path_regex: /*secrets(\.encrypted)?.yaml$
+      age: age158fw8p85p3cn0h2gmnysvg85pe0fwemuqr64yj0zyllsgk029a0qqv8cvr
+    - path_regex: /*controlplane(\.encrypted)?.yaml$
+      encrypted_regex: "(^token|crt|key|id|secret|secretboxEncryptionSecret)$"
+      age: age158fw8p85p3cn0h2gmnysvg85pe0fwemuqr64yj0zyllsgk029a0qqv8cvr
+    - path_regex: /*worker(\.encrypted)?.yaml$
+      encrypted_regex: "(^token|crt|key|id|secret|secretboxEncryptionSecret)$"
+      age: age158fw8p85p3cn0h2gmnysvg85pe0fwemuqr64yj0zyllsgk029a0qqv8cvr
+
