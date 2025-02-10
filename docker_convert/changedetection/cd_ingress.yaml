@@ -5,6 +5,7 @@ metadata:
   name: cd-ingress #name of the ingress instance
   namespace: default
   annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-production"
     traefik.ingress.kubernetes.io/router.entrypoints: websecure
 
 spec:
