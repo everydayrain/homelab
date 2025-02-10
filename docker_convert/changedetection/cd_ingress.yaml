@@ -12,9 +12,9 @@ spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - cd.bauerhouse.net
+        - cd.picniclunch.party
   rules:
-    - host: cd.bauerhouse.net
+    - host: cd.picniclunch.party
       http:
         paths:
           - path: "/"
