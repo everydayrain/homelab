@@ -11,9 +11,9 @@ spec:
   ingressClassName: traefik
   tls:
     - hosts:
-        - stirling.bauerhouse.net
+        - stirling.picniclunch.party
   rules:
-    - host: stirling.bauerhouse.net
+    - host: stirling.picniclunch.party
       http:
         paths:
           - path: "/"
