@@ -13,11 +13,12 @@ spec:
   tls:
     - hosts:
         - cd.picniclunch.party
+      secretName: cd-tls
   rules:
     - host: cd.picniclunch.party
       http:
         paths:
-          - path: "/"
+          - path: /
             pathType: Prefix
             backend:
               service:
