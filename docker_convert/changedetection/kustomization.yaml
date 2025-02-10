@@ -1,0 +1,11 @@
+namePrefix: kustomize-
+
+resources:
+  - cd_ingress.yaml
+  - changedetection-service.yaml
+  - changedetection-data-persistentvolumeclaim.yaml
+  - changedetection-deployment.yaml
+  - playwright-chrome-deployment.yaml
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization

@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: cd-ingress #name of the ingress instance
+  namespace: default
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+
+spec:
+  ingressClassName: traefik
+  tls:
+    - hosts:
+        - cd.bauerhouse.net
+  rules:
+    - host: cd.bauerhouse.net
+      http:
+        paths:
+          - path: "/"
+            pathType: Prefix
+            backend:
+              service:
+                name: changedetection
+                port:
+                  number: 5000
